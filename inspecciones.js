@@ -41,7 +41,8 @@ function llenarTabla(datos) {
       boton.textContent = 'Ver Detalles';
       boton.classList = 'btn btn-primary'
       boton.addEventListener('click', function () {
-        verDetalles(objeto.nroInscripcion);
+        // verDetalles(objeto.nroInscripcion);
+        window.location.href = 'inspeccion.html?id=' + objeto.nroInscripcion;
       });
   
       columnaAcciones.appendChild(boton);

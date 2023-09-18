@@ -1,222 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inspeccion</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid container">
-            <a class="navbar-brand" href="index.html">VTV</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Nueva inspección</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="inspecciones.html">Historial de inspecciones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">-</a>
-                </li>
-                </ul>
-            </div>
+                <a class="navbar-brand" href="index.html">VTV</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Nueva inspección</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inspecciones.html">Historial de inspecciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">-</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
-    
+
     <main>
         <div class="container">
 
-                <div class="card my-3">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <h2>Nueva inspección</h2>
-                        </div>
-
-                        <!-- Fecha y hora -->
-                        <div class="row mb-3">
-                            <div class="col">
-                                <label for="fecha" class="form-label">Fecha</label>
-                                <input type="date" class="form-control" id="fecha" name="fecha">
-                            </div>
-                            <div class="col">
-                                <label for="hora" class="form-label">Hora</label>
-                                <input type="time" class="form-control" id="hora">
-                            </div>
-                        </div>
-
-                        <!-- Propietario -->
-                        <div class="card mb-3">
+            <main>
+                <div class="container">
+                    <form id="InspeccionForm">
+                        <div class="card my-3">
                             <div class="card-body">
                                 <div class="mb-3">
-                                    <h5>Propietario</h5>
+                                    <h2>Detalle de inspección</h2>
                                 </div>
-
-                                <div class="mb-3">
-                                    <label for="nombrePropietario" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="nombrePropietario" placeholder="nombre">
+        
+                                <!-- Fecha y hora -->
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label for="fecha" class="form-label">Fecha</label>
+                                        <input type="date" class="form-control" id="fecha" name="fecha">
+                                    </div>
+                                    <div class="col">
+                                        <label for="hora" class="form-label">Hora</label>
+                                        <input type="time" class="form-control" id="hora">
+                                    </div>
                                 </div>
+        
+                                <!-- Propietario -->
+                                <!-- <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <h5>Propietario</h5>
+                                        </div>
+        
+                                        <div class="mb-3">
+                                            <label for="nombrePropietario" class="form-label">Nombre</label>
+                                            <input type="text" class="form-control" id="nombrePropietario" placeholder="nombre">
+                                        </div>
+        
+                                        <div class="mb-3">
+                                            <label for="apellidoPropietario" class="form-label">Apellido</label>
+                                            <input type="text" class="form-control" id="apellidoPropietario" placeholder="apellido">
+                                        </div>
+        
+                                        <div class="mb-3">
+                                            <label for="dniPropietario" class="form-label">DNI</label>
+                                            <input type="number" class="form-control" id="dniPropietario" placeholder="documento">
+                                        </div>
+        
+                                        <div class="mb-3">
+                                            <label for="telefonoPropietario" class="form-label">Teléfono</label>
+                                            <input type="number" class="form-control" id="telefonoPropietario" placeholder="teléfono">
+                                        </div>
+        
+                                        <div class="mb-3">
+                                            <label for="emailPropietario" class="form-label">email</label>
+                                            <input type="email" class="form-control" id="emailPropietario" placeholder="email">
+                                        </div>
+        
+                                    </div>
+                                </div> -->
+        
+                                <!-- Vehiculo -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <h5>Vehículo</h5>
+                                        </div>
+        
+                                        <div class="mb-3">
+                                            <label for="dominioVehiculo" class="form-label">Dominio</label>
+                                            <input type="text" class="form-control" id="dominioVehiculo" placeholder="dominio">
+                                        </div>
+        
+                                        <!-- Marca -->
+                                        <div class="mb-3">
+                                            <label for="marcaVehiculo" class="form-label">Marca</label>
+                                            <input type="text" class="form-control" id="marcaVehiculo" placeholder="marca">
+                                        </div>
 
-                                <div class="mb-3">
-                                    <label for="apellidoPropietario" class="form-label">Apellido</label>
-                                    <input type="text" class="form-control" id="apellidoPropietario" placeholder="apellido">
+                                        <!-- Modelo -->
+                                        <div class="mb-3">
+                                            <label for="modeloVehiculo" class="form-label">Modelo</label>
+                                            <input type="text" class="form-control" id="modeloVehiculo" placeholder="modelo">
+                                        </div>
+
+                                    </div>
                                 </div>
-
-                                <div class="mb-3">
-                                    <label for="dniPropietario" class="form-label">DNI</label>
-                                    <input type="number" class="form-control" id="dniPropietario" placeholder="documento">
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="telefonoPropietario" class="form-label">Teléfono</label>
-                                    <input type="number" class="form-control" id="telefonoPropietario" placeholder="teléfono">
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="emailPropietario" class="form-label">email</label>
-                                    <input type="email" class="form-control" id="emailPropietario" placeholder="email">
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Vehiculo -->
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <h5>Vehículo</h5>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="dominioVehiculo" class="form-label">Dominio</label>
-                                    <input type="text" class="form-control" id="dominioVehiculo" placeholder="dominio">
-                                </div>
-
-                                <!-- Marca -->
+        
+                                <!-- Inspector -->
                                 <div class="card mb-3">
                                     <div class="card-body">
                                         <div class="mb-3">
                                             <div class="mb-3">
-                                                <h5>Marca</h5>
+                                                <h5>Inspector</h5>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-10">
-                                                    <select class="form-select" id="marcaVehiculo" aria-label="Default select example" onchange="getModelo()">
-                                                        <option selected>Seleccione una marca</option>
-                                                        <option value="crear">Crear Marca</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-2">
-                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMarca">+</button>
-                                                </div>
-                                                
-                                            </div> 
-                                             
+                                            <div class="mb-3">
+                                                <label for="inspector" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="inspector" placeholder="modelo">
+                                            </div>
+    
                                         </div>
-
                                     </div>
                                 </div>
-
-                                <!-- Modelo -->
+        
+                                <!-- Estado -->
                                 <div class="card mb-3">
                                     <div class="card-body">
-                                        
                                         <div class="mb-3">
-                                            <h5>Modelo</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-10">                                            
-                                                <select class="form-select" id="modeloVehiculo" aria-label="Default select example" disabled>
-                                                    <option selected>Seleccione un modelo</option>
-                                                    <option value="otra">Crear Modelo</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="col-2">
-                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaleModelo">+</button>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                        <!-- Inspector -->
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <div class="mb-3">
-                                        <h5>Inspector</h5>
-                                    </div>
-                                    <select class="form-select" id="inspector" aria-label="Default select example">
-                                        <option selected>Seleccione un inspector</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Estado -->
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <div class="mb-3">
-                                        <h5>Estado de inspección</h5>
-                                    </div>
-                                    <select class="form-select" id="estado" aria-label="Default select example">
-                                        <option selected>Seleccione un estado</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Observaciones -->
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <div class="mb-3">
-                                        <h5>Observaciones</h5>
-                                    </div>
-
-                                    <div class="card mb-3">
-                                        <div class="card-body">
                                             <div class="mb-3">
-                                                <p>¿Es exento?</p>
-
-                                                <div class="row mb-3">
-                                                    <div class="col-2">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="opcionExento" value="True">
-                                                        <label class="form-check-label" for="opcionSi">Si</label>
-                                                    </div>
-                                                    <div class="col-2">
-                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="opcionExento" value="False" checked>
-                                                        <label class="form-check-label" for="opcionNo">No</label>
+                                                <h5>Estado de inspección</h5>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="estado" class="form-label">Condición</label>
+                                                <input type="text" class="form-control" id="estado" placeholder="modelo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Observaciones -->
+                                <!-- <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <div class="mb-3">
+                                                <h5>Observaciones</h5>
+                                            </div>
+        
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                    <div class="mb-3">
+                                                        <p>¿Es exento?</p>
+        
+                                                        <div class="row mb-3">
+                                                            <div class="col-2">
+                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="opcionExento" value="True">
+                                                                <label class="form-check-label" for="opcionSi">Si</label>
+                                                            </div>
+                                                            <div class="col-2">
+                                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="opcionExento" value="False" checked>
+                                                                <label class="form-check-label" for="opcionNo">No</label>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>  
                                         </div>
-                                    </div>  
+                                    </div> -->
                                 </div>
                             </div>
+        
+                            
+                            
                         </div>
-                    </div>
-
-
-                    
+                    </form>
                 </div>
+            </main>
+        
 
         </div>
     </main>
-
+    <script src="inspeccion.js"></script>
 </body>
+
 </html>
