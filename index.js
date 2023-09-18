@@ -2,6 +2,7 @@ var selectMarca = document.getElementById("marcaVehiculo");
 var selectModelo = document.getElementById("modeloVehiculo");
 var selectInspector = document.getElementById("inspector");
 var selectEstado = document.getElementById("estado");
+var marcaSelected = ""
 
 var url = "http://localhost:8080/"; 
 
@@ -79,7 +80,7 @@ function getEstado(){
 
 function getModelo(){
     var modalModeloLabel = document.getElementById("modelModeloLabel");
-    var selectedOption = selectMarca.options[selectMarca.selectedIndex];
+    var marcaSelected = selectMarca.options[selectMarca.selectedIndex];
     var marca = selectMarca.value;
 
 
@@ -102,7 +103,7 @@ function getModelo(){
         });
 
         selectModelo.removeAttribute("disabled");
-        modalModeloLabel.innerHTML = "Crear modelo para: " + selectedOption.textContent;
+        modalModeloLabel.innerHTML = "Crear modelo para: " + marcaSelected.textContent;
     })
     .catch(function(error) {
         console.error("Error al cargar marcas: " + error);
@@ -183,10 +184,9 @@ document.getElementById("InspeccionForm").addEventListener("submit", function (e
     var telefonoPropietario = document.getElementById("telefonoPropietario").value;
     var emailPropietario = document.getElementById("emailPropietario").value;
     var dominioVehiculo = document.getElementById("dominioVehiculo").value;
-    var marcaVehiculo = selectMarca.value;
-    var modeloVehiculo = selectModelo.value;
-    var inspector = document.getElementById("inspector").value;
-    var estado = document.getElementById("estado").value;
+    var modeloId = selectModelo.value;
+    var inspectorId = selectInspector.value;
+    var estadoId = selectEstado.value;
     var esExento = document.getElementById("opcionExento").checked;
 
     // Construir el objeto JavaScript que representa la estructura del JSON
@@ -196,10 +196,7 @@ document.getElementById("InspeccionForm").addEventListener("submit", function (e
         vehiculo: {
             dominio: dominioVehiculo,
             modelo: {
-                nombre: modeloVehiculo,
-                marca: {
-                    id: marcaVehiculo
-                }
+                id: modeloId
             },
             propietario: {
                 nombre: nombrePropietario,
@@ -210,10 +207,10 @@ document.getElementById("InspeccionForm").addEventListener("submit", function (e
             }
         },
         inspector: {
-            id: parseInt(inspector), 
+            id: inspectorId 
         },
         estado: {
-            id: parseInt(estado), 
+            id: estadoId 
         },
         esExento: esExento
     };
