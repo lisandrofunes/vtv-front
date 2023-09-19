@@ -18,11 +18,11 @@ function getInspeccion(){
         document.getElementById('fecha').value = inspeccion.fecha;
         document.getElementById('hora').value = inspeccion.hora;
 
-        // document.getElementById('nombrePropietario').value = inspeccion.propietario.nombre;
-        // document.getElementById('apellidoPropietario').value = inspeccion.propietario.apellido;
-        // document.getElementById('dniPropietario').value = inspeccion.propietario.dni;
-        // document.getElementById('telefonoPropietario').value = inspeccion.propietario.telefono;
-        // document.getElementById('emailPropietario').value = inspeccion.propietario.email;
+        document.getElementById('nombrePropietario').value = inspeccion.vehiculo.propietario.nombre;
+        document.getElementById('apellidoPropietario').value = inspeccion.vehiculo.propietario.apellido;
+        document.getElementById('dniPropietario').value = inspeccion.vehiculo.propietario.dni;
+        document.getElementById('telefonoPropietario').value = inspeccion.vehiculo.propietario.telefono;
+        document.getElementById('emailPropietario').value = inspeccion.vehiculo.propietario.email;
 
         document.getElementById('dominioVehiculo').value = inspeccion.vehiculo.dominio;
         document.getElementById('marcaVehiculo').value = inspeccion.vehiculo.modelo.marca.nombre;
@@ -35,7 +35,7 @@ function getInspeccion(){
 
     })
     .catch(function(error) {
-        console.error("Error al cargar marcas: " + error);
+        console.error("Error al cargar la inspeccion: " + error);
     });
 }
 

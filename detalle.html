@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inspeccion</title>
+    <title>Detalle</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -28,7 +28,7 @@
                             <a class="nav-link" href="inspecciones.html">Historial de inspecciones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">-</a>
+                            <a class="nav-link" href="cliente.html">Clientes</a>
                         </li>
                     </ul>
                 </div>
@@ -61,39 +61,43 @@
                                 </div>
         
                                 <!-- Propietario -->
-                                <!-- <div class="card mb-3">
+                                <div class="card mb-3">
                                     <div class="card-body">
                                         <div class="mb-3">
                                             <h5>Propietario</h5>
                                         </div>
         
-                                        <div class="mb-3">
-                                            <label for="nombrePropietario" class="form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="nombrePropietario" placeholder="nombre">
+                                        <div class="row">
+                                            <div class="col mb-3">
+                                                <label for="nombrePropietario" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="nombrePropietario" placeholder="nombre">
+                                            </div>
+            
+                                            <div class="col mb-3">
+                                                <label for="apellidoPropietario" class="form-label">Apellido</label>
+                                                <input type="text" class="form-control" id="apellidoPropietario" placeholder="apellido">
+                                            </div>
+            
+                                            <div class="col mb-3">
+                                                <label for="dniPropietario" class="form-label">DNI</label>
+                                                <input type="number" class="form-control" id="dniPropietario" placeholder="documento">
+                                            </div>
                                         </div>
-        
-                                        <div class="mb-3">
-                                            <label for="apellidoPropietario" class="form-label">Apellido</label>
-                                            <input type="text" class="form-control" id="apellidoPropietario" placeholder="apellido">
-                                        </div>
-        
-                                        <div class="mb-3">
-                                            <label for="dniPropietario" class="form-label">DNI</label>
-                                            <input type="number" class="form-control" id="dniPropietario" placeholder="documento">
-                                        </div>
-        
-                                        <div class="mb-3">
-                                            <label for="telefonoPropietario" class="form-label">Teléfono</label>
-                                            <input type="number" class="form-control" id="telefonoPropietario" placeholder="teléfono">
-                                        </div>
-        
-                                        <div class="mb-3">
-                                            <label for="emailPropietario" class="form-label">email</label>
-                                            <input type="email" class="form-control" id="emailPropietario" placeholder="email">
+
+                                        <div class="row">
+                                            <div class="col mb-3">
+                                                <label for="telefonoPropietario" class="form-label">Teléfono</label>
+                                                <input type="number" class="form-control" id="telefonoPropietario" placeholder="teléfono">
+                                            </div>
+            
+                                            <div class="col mb-3">
+                                                <label for="emailPropietario" class="form-label">email</label>
+                                                <input type="email" class="form-control" id="emailPropietario" placeholder="email">
+                                            </div>
                                         </div>
         
                                     </div>
-                                </div> -->
+                                </div>
         
                                 <!-- Vehiculo -->
                                 <div class="card mb-3">
@@ -102,21 +106,21 @@
                                             <h5>Vehículo</h5>
                                         </div>
         
-                                        <div class="mb-3">
-                                            <label for="dominioVehiculo" class="form-label">Dominio</label>
-                                            <input type="text" class="form-control" id="dominioVehiculo" placeholder="dominio">
-                                        </div>
-        
-                                        <!-- Marca -->
-                                        <div class="mb-3">
-                                            <label for="marcaVehiculo" class="form-label">Marca</label>
-                                            <input type="text" class="form-control" id="marcaVehiculo" placeholder="marca">
-                                        </div>
-
-                                        <!-- Modelo -->
-                                        <div class="mb-3">
-                                            <label for="modeloVehiculo" class="form-label">Modelo</label>
-                                            <input type="text" class="form-control" id="modeloVehiculo" placeholder="modelo">
+                                        <div class="row">
+                                            <div class="col mb-3">
+                                                <label for="dominioVehiculo" class="form-label">Dominio</label>
+                                                <input type="text" class="form-control" id="dominioVehiculo" placeholder="dominio">
+                                            </div>
+                                            
+                                            <div class="col mb-3">
+                                                <label for="marcaVehiculo" class="form-label">Marca</label>
+                                                <input type="text" class="form-control" id="marcaVehiculo" placeholder="marca">
+                                            </div>
+                                            
+                                            <div class="col mb-3">
+                                                <label for="modeloVehiculo" class="form-label">Modelo</label>
+                                                <input type="text" class="form-control" id="modeloVehiculo" placeholder="modelo">
+                                            </div>
                                         </div>
 
                                     </div>
@@ -194,7 +198,7 @@
 
         </div>
     </main>
-    <script src="inspeccion.js"></script>
+    <script src="detalle.js"></script>
 </body>
 
 </html>

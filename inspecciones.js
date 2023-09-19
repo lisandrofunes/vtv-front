@@ -42,7 +42,7 @@ function llenarTabla(datos) {
       boton.classList = 'btn btn-primary'
       boton.addEventListener('click', function () {
         // verDetalles(objeto.nroInscripcion);
-        window.location.href = 'inspeccion.html?id=' + objeto.nroInscripcion;
+        window.location.href = 'detalle.html?id=' + objeto.nroInscripcion;
       });
   
       columnaAcciones.appendChild(boton);
