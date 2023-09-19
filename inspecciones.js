@@ -1,8 +1,29 @@
 var url = "http://localhost:8080/"; 
+var selectEstado = document.getElementById("selectEstado");
 
 document.addEventListener("DOMContentLoaded", function() {
     getInspeccion();
+    getEstado();
 });
+
+function getEstado(){
+    fetch(url+"estado/list")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+
+        data.forEach(function(item) {
+            var option = document.createElement("option");
+            option.value = item.id; 
+            option.textContent = item.nombre
+            selectEstado.appendChild(option);
+        });
+    })
+    .catch(function(error) {
+        console.error("Error al cargar marcas: " + error);
+    });
+}
 
 function getInspeccion(){
     fetch(url+"inspeccion/list")
@@ -14,10 +35,31 @@ function getInspeccion(){
         llenarTabla(data);
     })
     .catch(function(error) {
-        console.error("Error al cargar marcas: " + error);
+        console.error("Error al cargar inspecciones: " + error);
     });
 }
 
+function getInspeccionByEstado(){
+    var idEstado = selectEstado.value
+
+    if(selectEstado.value == "all"){
+
+        getInspeccion();
+
+    } else{
+        fetch(`${url}inspeccion/listbyestado/${idEstado}`)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+
+            llenarTabla(data);
+        })
+        .catch(function(error) {
+            console.error("Error al cargar inspecciones por estado: " + error);
+        });
+    }
+}
 
 function llenarTabla(datos) {
 
