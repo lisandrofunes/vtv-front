@@ -18,6 +18,22 @@ function getCliente(){
     });
 }
 
+function getClienteByDni(dni){
+    fetch(`${url}propietario/by/${dni}`)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+
+        tablaClienteByDNI(data);
+    })
+    .catch(function(error) {
+        console.error("Error al cargar cliente por DNI: " + error);
+    });
+}
+
+
+
 function getVehiculoByProp(clienteId){
     fetch(`${url}vehiculo/listbyprop/${clienteId}`)
     .then(function(response) {
@@ -90,6 +106,44 @@ function llenarTablaCliente(datos) {
     });
 }
 
+function tablaClienteByDNI(cliente){
+    const tabla = document.getElementById('tablaClientes');
+    const tbody = tabla.querySelector('tbody');
+  
+    tbody.innerHTML = '';
+
+    const fila = document.createElement('tr');
+    const columnaApellido = document.createElement('td');
+    const columnaNombre = document.createElement('td');
+    const columnaDNI = document.createElement('td');
+    const columnaAcciones = document.createElement('td');
+
+    columnaApellido.textContent = cliente.apellido;
+    columnaNombre.textContent = cliente.nombre;
+    columnaDNI.textContent = cliente.dni;
+
+    const boton = document.createElement('button');
+    boton.type = 'button';
+    boton.textContent = 'Ver vehículos';
+    boton.classList = 'btn btn-primary';
+    boton.setAttribute("data-bs-toggle", "modal");
+    boton.setAttribute("data-bs-target", "#modalVehiculos")
+    boton.addEventListener('click', function () {
+    
+        getVehiculoByProp(cliente.id);
+
+    });
+
+    columnaAcciones.appendChild(boton);
+
+    fila.appendChild(columnaApellido);
+    fila.appendChild(columnaNombre);
+    fila.appendChild(columnaDNI);
+    fila.appendChild(columnaAcciones);
+
+    tbody.appendChild(fila);
+}
+
 function llenarTablaVehiculo(datos){
 
     const tabla = document.getElementById('tablaVehiculos');
@@ -130,3 +184,11 @@ function llenarTablaVehiculo(datos){
 
 }
   
+document.getElementById("formBusqueda").addEventListener("submit", function (event) {
+    event.preventDefault(); 
+
+    var input = document.getElementById("inputBusqueda").value;
+
+    getClienteByDni(input);
+
+});
