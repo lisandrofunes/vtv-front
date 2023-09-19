@@ -26,8 +26,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="cliente.html">Clientes</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Inspectores</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Inspectores</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="inspectorNuevo.html">Nuevo inspector</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="inspectores.html">Consultar inspectores</a></li>
+                    </ul>
                 </li>
                 </ul>
             </div>
@@ -255,11 +261,8 @@
                                 </div>
                             </div>
                         </div>
+                        <button type="submit" class="btn btn-primary">Confirmar</button>
                     </div>
-
-                    
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    
                 </div>
             </form>
         </div>

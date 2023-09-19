@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Inspector</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid container">
+                <a class="navbar-brand" href="index.html">VTV</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Nueva inspección</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inspecciones.html">Historial de inspecciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cliente.html">Clientes</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Inspectores</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="inspectorNuevo.html">Nuevo inspector</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="inspectores.html">Consultar inspectores</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <form action="">
+                <div class="card my-3">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col">
+                                    <h2>Nuevo Inspector</h2>
+                                </div>
+                                <div class="col-2">
+                                    <label for="legajo" class="form-label">Legajo</label>
+                                    <input type="text" class="form-control" id="legajo" placeholder="legajo" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nombrePropietario" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombrePropietario" placeholder="nombre">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="apellidoPropietario" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="apellidoPropietario" placeholder="apellido">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="dniPropietario" class="form-label">DNI</label>
+                            <input type="number" class="form-control" id="dniPropietario" placeholder="documento">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefonoPropietario" class="form-label">Teléfono</label>
+                            <input type="number" class="form-control" id="telefonoPropietario" placeholder="teléfono">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="emailPropietario" class="form-label">email</label>
+                            <input type="email" class="form-control" id="emailPropietario" placeholder="email">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary disabled">Confirmar</button>
+                    </div>
+                    
+                </div>
+                
+            </form>
+        </div>
+
+    </main>
+
+    <script src="inspectorNuevo.html"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
